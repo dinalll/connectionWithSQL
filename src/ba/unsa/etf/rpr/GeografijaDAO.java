@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
