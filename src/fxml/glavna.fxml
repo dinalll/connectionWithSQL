@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TableView fx:id="tableViewGradovi" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colGradId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colGradNaziv" prefWidth="75.0" text="Naziv" />
+            <TableColumn fx:id="colGradStanovnika" prefWidth="75.0" text="Stanovnika" />
+            <TableColumn fx:id="colGradDrzava" prefWidth="75.0" text="Država" />
+        </columns>
+      </TableView>
+   </center>
+   <right>
+      <VBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="120.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="btnDodajGrad" fx:id="btnDodajGrad" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#dodajGrad" text="Dodaj grad">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="btnDodajDrzavu" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#dodajDrzavu" text="Dodaj državu">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="btnIzmijeniGrad" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#izmijeniGrad" text="Izmijeni grad">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnObrisiGrad" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Obriši grad" onAction="#obrisiGrad">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
