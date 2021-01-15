@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -30,10 +31,7 @@ public class GeografijaDAO {
         }
     }
     public void inicijalizirajBazu(){
-        File dbfile = new File("baza.db");
-        dbfile.delete();
         Scanner squeri= null;
-
         try {
             squeri = new Scanner(new FileInputStream("baza.db.sql"));
         } catch (FileNotFoundException e) {
@@ -51,9 +49,7 @@ public class GeografijaDAO {
                 }
                 try {
                     stmt.execute(upit);
-                } catch (SQLException throwables) {
-                    throwables.printStackTrace();
-                }
+                } catch (SQLException throwables) { }
                 upit="";
             }
         }
@@ -90,11 +86,25 @@ public class GeografijaDAO {
         }
         return povratni;
     }
-    public ArrayList<Drzava> drzave() throws SQLException {
-        ResultSet privrs= poredakdrzava.executeQuery();
+    public ArrayList<Drzava> drzave() {
+        ResultSet privrs= null;
+        try {
+            privrs = poredakdrzava.executeQuery();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         ArrayList<Drzava> povratni= new ArrayList<Drzava>();
-        while(privrs.next()){
-            povratni.add(new Drzava(privrs.getInt(1),privrs.getInt(2),privrs.getString(3)));
+        while(true){
+            try {
+                if (!privrs.next()) break;
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+            try {
+                povratni.add(new Drzava(privrs.getInt(1),privrs.getInt(2),privrs.getString(3)));
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
         }
         return povratni;
     }
@@ -161,13 +171,8 @@ public class GeografijaDAO {
     }
 
     public Drzava nadjiDrzavu(String drzava) {
-        try {
-            for(Drzava d: drzave()){
-                if(drzava.equals(d.getNaziv()))return d;
-            }
-        } catch (SQLException throwables) {
-
-            throwables.printStackTrace();
+        for(Drzava d: drzave()){
+            if(drzava.equals(d.getNaziv()))return d;
         }
         return null;
     }
@@ -179,18 +184,15 @@ public class GeografijaDAO {
             dodajDrzavu.setInt(2,drzava.getGlavni_grad());
             dodajDrzavu.setString(3,drzava.getNaziv());
             dodajDrzavu.executeUpdate();
+
         } catch (SQLException throwables) {
             System.out.println("Neuspjelo dodavanje nove države!");
             throwables.printStackTrace();
         }
     }
     public Drzava dajDrzavuPoId(int x){
-        try {
-            for(Drzava d:drzave()){
-                if(d.getId()==x)return d;
-            }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        for(Drzava d:drzave()){
+            if(d.getId()==x)return d;
         }
         return null;
     }
@@ -203,5 +205,23 @@ public class GeografijaDAO {
     public void izmijeniGrad(Grad grad) {
         obrisiGrad(dajGradPoId(grad.getId()).getNaziv());
         dodajGrad(grad);
+    }
+
+    public void vratiBazuNaDefault() {
+        Statement stmt = null;
+        try {
+            stmt = conn.createStatement();
+            stmt.executeUpdate("DELETE FROM grad");
+            stmt.executeUpdate("DELETE FROM drzava");
+            inicijalizirajBazu();
+        } catch (SQLException throwables) {
+            System.out.println("OK");
+        }
+    }
+    public Grad nadjiGrad(String graz) {
+        for(Grad g:gradovi()){
+            if(g.getNaziv().equals(graz))return g;
+        }
+        return null;
     }
 }

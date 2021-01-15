@@ -40,5 +40,11 @@ public class Drzava {
 
     public void setGlavniGrad(Grad grad) {
         this.glavniGrad=grad;
+        this.setGlavni_grad(grad.getId());
+    }
+
+    @Override
+    public String toString() {
+        return naziv;
     }
 }
