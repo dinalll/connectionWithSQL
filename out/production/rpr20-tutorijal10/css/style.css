@@ -1,0 +1,12 @@
+#fieldNaziv{
+    -fx-background-color:lightpink;
+}
+#fieldNazivOk{
+    -fx-background-color:greenyellow;
+}
+#fieldBrojStanovnika{
+    -fx-background-color:lightpink;
+}
+#fieldBrojStanovnikaOk{
+    -fx-background-color:greenyellow;
+}
