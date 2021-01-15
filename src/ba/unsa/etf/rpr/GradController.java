@@ -24,11 +24,16 @@ public class GradController{
     private GeografijaDAO dao=GeografijaDAO.getInstance();
     private Grad zadnjiDodan=null;
 
-    public GradController(Object o, ArrayList<Drzava> drzave) {
+    public GradController(Grad o, ArrayList<Drzava> drzave) {
+        zadnjiDodan=o;
     }
     public GradController(){}
     @FXML
     public void initialize() {
+        if(zadnjiDodan!=null){
+            fieldNaziv.setText(zadnjiDodan.getNaziv());
+            fieldBrojStanovnika.setText(zadnjiDodan.getBrojStanovnika()+"");
+        }
         fieldNaziv.textProperty().addListener((observableValue, old, novi) -> {
             if(novi.length()!=0)fieldNaziv.setId("fieldNazivOk");
             else{fieldNaziv.setId("fieldNaziv");}
@@ -39,6 +44,7 @@ public class GradController{
         });
         choiceDrzava.setValue(dao.drzave().get(0));
         choiceDrzava.setItems(dajObsListu());
+
     }
 
     public ObservableList<Drzava> dajObsListu(){
@@ -50,19 +56,29 @@ public class GradController{
     }
     public void okDodaj(ActionEvent event){
         if(provjeri()) {
-            zadnjiDodan=new Grad(dao.gradovi().size() + 1, Integer.parseInt(fieldBrojStanovnika.getText()),
-                    dao.nadjiDrzavu(choiceDrzava.getValue().toString()).getId(), fieldNaziv.getText().toString(),
-                    dao.nadjiDrzavu(choiceDrzava.getValue().toString()));
-            dao.dodajGrad(zadnjiDodan);
+            if(zadnjiDodan!=null){
+                zadnjiDodan.setNaziv(fieldNaziv.getText());
+                zadnjiDodan.setBrojStanovnika(Integer.parseInt(fieldBrojStanovnika.getText()));
+                dao.izmijeniGrad(zadnjiDodan);
+                ((Stage) (((Button) event.getSource()).getScene().getWindow())).close();
+            }
+            else {
+                zadnjiDodan = new Grad(dao.gradovi().size() + 1, Integer.parseInt(fieldBrojStanovnika.getText()),
+                        dao.nadjiDrzavu(choiceDrzava.getValue().toString()).getId(), fieldNaziv.getText().toString(),
+                        dao.nadjiDrzavu(choiceDrzava.getValue().toString()));
+                dao.dodajGrad(zadnjiDodan);
+                ((Stage) (((Button) event.getSource()).getScene().getWindow())).close();
+            }
         }
-            ((Stage) (((Button) event.getSource()).getScene().getWindow())).close();
-
     }
     public void cancelClose(ActionEvent event){
         ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
     }
     public boolean provjeri(){
-        if(fieldBrojStanovnika.getText().length()!=0 && fieldNaziv.getText().length()!=0)return true;
+        if(fieldBrojStanovnika.getText().length()!=0 && fieldNaziv.getText().length()!=0){
+            if(fieldBrojStanovnika.getText().contains("-"))return false;
+            return true;
+        }
         return false;
     }
     public Grad getGrad() {

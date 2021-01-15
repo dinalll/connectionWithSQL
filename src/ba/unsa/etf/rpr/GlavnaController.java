@@ -83,6 +83,11 @@ public class GlavnaController extends Application{
         Parent root=fxmlLoader.load();
         Stage stage=new Stage();
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+        stage.show();
+        stage.setOnHidden(a->{
+            ucitajBazu();
+        });
+
 
     }
     public void obrisiGrad(){
@@ -91,7 +96,6 @@ public class GlavnaController extends Application{
         alert.setTitle("Confirmation Dialog");
         alert.setHeaderText("Potvrda brisanja grada!");
         alert.setContentText("Da li ste sigurni da želite obrisati grad "+grad.getNaziv()+"?");
-
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
             dao.obrisiGrad(grad.getNaziv());

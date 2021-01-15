@@ -45,11 +45,16 @@ public class DrzavaController{
         return povratni;
     }
     public void okDodaj(ActionEvent event){
-
-        dao.dodajDrzavu(new Drzava(dao.drzave().size()+1, dao.nadjiGrad(choiceGrad.getValue().toString()).getId(),fieldNaziv.getText()));
-        ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
+        if(provjeri()) {
+            dao.dodajDrzavu(new Drzava(dao.drzave().size() + 1, dao.nadjiGrad(choiceGrad.getValue().toString()).getId(), fieldNaziv.getText()));
+            ((Stage) (((Button) event.getSource()).getScene().getWindow())).close();
+        }
     }
     public void cancelClose(ActionEvent event){
         ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
+    }
+    public boolean provjeri(){
+        if(fieldNaziv.getText().length()!=0)return true;
+        return false;
     }
 }
