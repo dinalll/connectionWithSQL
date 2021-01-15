@@ -22,6 +22,7 @@ public class GradController{
     @FXML private TextField fieldBrojStanovnika;
     @FXML private ChoiceBox choiceDrzava;
     private GeografijaDAO dao=GeografijaDAO.getInstance();
+    private Grad zadnjiDodan=null;
 
     public GradController(Object o, ArrayList<Drzava> drzave) {
     }
@@ -29,6 +30,12 @@ public class GradController{
     @FXML
     public void initialize() {
         fieldNaziv.textProperty().addListener((observableValue, old, novi) -> {
+            if(novi.length()!=0)fieldNaziv.setId("fieldNazivOk");
+            else{fieldNaziv.setId("fieldNaziv");}
+        });
+        fieldBrojStanovnika.textProperty().addListener((observableValue, s, t1) ->{
+            if(t1.length()!=0)fieldBrojStanovnika.setId("fieldBrojStanovnikaOk");
+            else{fieldBrojStanovnika.setId("fieldBrojStanovnika");}
         });
         choiceDrzava.setValue(dao.drzave().get(0));
         choiceDrzava.setItems(dajObsListu());
@@ -42,17 +49,23 @@ public class GradController{
         return povratni;
     }
     public void okDodaj(ActionEvent event){
-        System.out.println(dao.drzave().size());
-        dao.dodajGrad(new Grad(dao.gradovi().size()+1,Integer.parseInt(fieldBrojStanovnika.getText()),
-                dao.nadjiDrzavu(choiceDrzava.getValue().toString()).getId(),fieldNaziv.getText().toString(),dao.nadjiDrzavu(choiceDrzava.getValue().toString())));
-        System.out.println(dao.drzave().size());
-        ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
+        if(provjeri()) {
+            zadnjiDodan=new Grad(dao.gradovi().size() + 1, Integer.parseInt(fieldBrojStanovnika.getText()),
+                    dao.nadjiDrzavu(choiceDrzava.getValue().toString()).getId(), fieldNaziv.getText().toString(),
+                    dao.nadjiDrzavu(choiceDrzava.getValue().toString()));
+            dao.dodajGrad(zadnjiDodan);
+        }
+            ((Stage) (((Button) event.getSource()).getScene().getWindow())).close();
+
     }
     public void cancelClose(ActionEvent event){
         ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
     }
-
+    public boolean provjeri(){
+        if(fieldBrojStanovnika.getText().length()!=0 && fieldNaziv.getText().length()!=0)return true;
+        return false;
+    }
     public Grad getGrad() {
-        return null;
+        return zadnjiDodan;
     }
 }

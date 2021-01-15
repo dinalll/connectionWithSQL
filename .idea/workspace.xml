@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="dodan SDK library na inteliJ">
-      <change afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/DrzavaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GlavnaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GradController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxml/drzava.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxml/glavna.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxml/grad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javafx.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="z">
+      <change afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baza.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Drzava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Drzava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GeografijaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GeografijaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Grad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Grad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/DrzavaControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/DrzavaControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/GradControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/ba/unsa/etf/rpr/GradControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/DrzavaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/DrzavaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GlavnaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GlavnaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GradController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GradController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/drzava.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/drzava.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/grad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/grad.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +100,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1579258535779" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -183,46 +175,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrzavaControllerTest.testValidacijaDrzave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rpr20-tutorijal10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
-      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.DrzavaControllerTest" />
-      <option name="METHOD_NAME" value="testValidacijaDrzave(org.testfx.api.FxRobot)" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GeografijaDAOTest.dodajDrzavu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rpr20-tutorijal10" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
-      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.GeografijaDAOTest" />
-      <option name="METHOD_NAME" value="dodajDrzavu" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GlavnaControllerTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="rpr20-tutorijal10" />
       <extension name="coverage">
@@ -242,7 +194,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GlavnaControllerTest.testObrisiGrad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GradControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpr20-tutorijal10" />
       <extension name="coverage">
         <pattern>
@@ -251,8 +203,47 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
-      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.GlavnaControllerTest" />
-      <option name="METHOD_NAME" value="testObrisiGrad(org.testfx.api.FxRobot)" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.GradControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GradControllerTest.testValidacijaGrada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpr20-tutorijal10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.GradControllerTest" />
+      <option name="METHOD_NAME" value="testValidacijaGrada(org.testfx.api.FxRobot)" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GradControllerTest.testVracanjeGrada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpr20-tutorijal10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.GradControllerTest" />
+      <option name="METHOD_NAME" value="testVracanjeGrada(org.testfx.api.FxRobot)" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -315,18 +306,18 @@
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.GlavnaControllerTest" />
       <item itemvalue="JUnit.ba.unsa.etf.rpr in rpr20-tutorijal10" />
-      <item itemvalue="JUnit.GeografijaDAOTest.dodajDrzavu" />
-      <item itemvalue="JUnit.GlavnaControllerTest.testObrisiGrad" />
-      <item itemvalue="JUnit.DrzavaControllerTest.testValidacijaDrzave" />
       <item itemvalue="JUnit.DrzavaControllerTest" />
+      <item itemvalue="JUnit.GradControllerTest.testValidacijaGrada" />
+      <item itemvalue="JUnit.GradControllerTest" />
+      <item itemvalue="JUnit.GradControllerTest.testVracanjeGrada" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ba.unsa.etf.rpr in rpr20-tutorijal10" />
+        <item itemvalue="JUnit.GradControllerTest.testVracanjeGrada" />
+        <item itemvalue="JUnit.GradControllerTest" />
+        <item itemvalue="JUnit.GradControllerTest.testValidacijaGrada" />
         <item itemvalue="JUnit.DrzavaControllerTest" />
-        <item itemvalue="JUnit.DrzavaControllerTest.testValidacijaDrzave" />
-        <item itemvalue="JUnit.GlavnaControllerTest.testObrisiGrad" />
-        <item itemvalue="JUnit.GeografijaDAOTest.dodajDrzavu" />
       </list>
     </recent_temporary>
   </component>
@@ -427,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610633297962</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="zavrsen fxml fajlovi, podesavanje testova da prolaze">
+      <created>1610671899194</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610671899194</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -457,7 +455,8 @@
     <MESSAGE value="Initial import" />
     <MESSAGE value="kopiran t9 src folder,baza.db,baza.db sql ali ima greske sa library" />
     <MESSAGE value="dodan SDK library na inteliJ" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodan SDK library na inteliJ" />
+    <MESSAGE value="zavrsen fxml fajlovi, podesavanje testova da prolaze" />
+    <option name="LAST_COMMIT_MESSAGE" value="zavrsen fxml fajlovi, podesavanje testova da prolaze" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

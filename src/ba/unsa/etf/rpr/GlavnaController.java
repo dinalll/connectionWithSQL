@@ -76,9 +76,14 @@ public class GlavnaController extends Application{
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
         stage.show();
     }
-    public void izmijeniGrad(){
+    public void izmijeniGrad() throws IOException {
         Grad grad = (Grad) tableViewGradovi.getSelectionModel().getSelectedItem();
-        dao.izmijeniGrad(grad);
+        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("/fxml/grad.fxml"));
+        fxmlLoader.setController(new GradController(grad,dao.drzave()));
+        Parent root=fxmlLoader.load();
+        Stage stage=new Stage();
+        stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+
     }
     public void obrisiGrad(){
         Grad grad = (Grad) tableViewGradovi.getSelectionModel().getSelectedItem();

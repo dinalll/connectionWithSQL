@@ -30,6 +30,8 @@ public class DrzavaController{
     @FXML
     public void initialize() {
         fieldNaziv.textProperty().addListener((observableValue, old, novi) -> {
+            if(novi.length()!=0)fieldNaziv.setId("fieldNazivOk");
+            else{fieldNaziv.setId("fieldNaziv");}
         });
         choiceGrad.setValue(dao.gradovi().get(0));
         choiceGrad.setItems(dajObsListu());
@@ -43,9 +45,8 @@ public class DrzavaController{
         return povratni;
     }
     public void okDodaj(ActionEvent event){
-        System.out.println(dao.drzave().size());
+
         dao.dodajDrzavu(new Drzava(dao.drzave().size()+1, dao.nadjiGrad(choiceGrad.getValue().toString()).getId(),fieldNaziv.getText()));
-        System.out.println(dao.drzave().size());
         ((Stage)(((Button)event.getSource()).getScene().getWindow())).close();
     }
     public void cancelClose(ActionEvent event){
