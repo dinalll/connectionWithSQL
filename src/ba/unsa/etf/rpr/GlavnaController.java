@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Optional;
@@ -75,9 +76,19 @@ public class GlavnaController extends Application{
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
         stage.show();
     }
-    public void izmijeniGrad(){
+    public void izmijeniGrad() throws IOException {
         Grad grad = (Grad) tableViewGradovi.getSelectionModel().getSelectedItem();
-        dao.izmijeniGrad(grad);
+        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("/fxml/grad.fxml"));
+        fxmlLoader.setController(new GradController(grad,dao.drzave()));
+        Parent root=fxmlLoader.load();
+        Stage stage=new Stage();
+        stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+        stage.show();
+        stage.setOnHidden(a->{
+            ucitajBazu();
+        });
+
+
     }
     public void obrisiGrad(){
         Grad grad = (Grad) tableViewGradovi.getSelectionModel().getSelectedItem();
@@ -85,7 +96,6 @@ public class GlavnaController extends Application{
         alert.setTitle("Confirmation Dialog");
         alert.setHeaderText("Potvrda brisanja grada!");
         alert.setContentText("Da li ste sigurni da želite obrisati grad "+grad.getNaziv()+"?");
-
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK){
             dao.obrisiGrad(grad.getNaziv());

@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="z">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baza.db" beforeDir="false" afterPath="$PROJECT_DIR$/baza.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal10/ba/unsa/etf/rpr/DrzavaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr20-tutorijal10/ba/unsa/etf/rpr/DrzavaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal10/ba/unsa/etf/rpr/GlavnaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr20-tutorijal10/ba/unsa/etf/rpr/GlavnaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal10/ba/unsa/etf/rpr/GradController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr20-tutorijal10/ba/unsa/etf/rpr/GradController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/rpr20-tutorijal10/fxml/grad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/rpr20-tutorijal10/fxml/grad.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/DrzavaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/DrzavaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GlavnaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GlavnaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GradController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ba/unsa/etf/rpr/GradController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/grad.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/grad.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="svi osim 1 testa prolaze nisam siguran zbog cega" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +115,7 @@
       <recent name="ba.unsa.etf.rpr" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ba.unsa.etf.rpr in rpr20-tutorijal10">
+  <component name="RunManager" selected="JUnit.GlavnaControllerTest.testIzmijeniGrad">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -310,8 +299,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ba.unsa.etf.rpr in rpr20-tutorijal10" />
         <item itemvalue="JUnit.GlavnaControllerTest.testIzmijeniGrad" />
+        <item itemvalue="JUnit.ba.unsa.etf.rpr in rpr20-tutorijal10" />
         <item itemvalue="JUnit.All in rpr20-tutorijal10" />
         <item itemvalue="JUnit.GradControllerTest.testValidacijaGrada" />
         <item itemvalue="JUnit.DrzavaControllerTest.testValidacijaDrzave" />
@@ -422,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610671899194</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="svi osim 1 testa prolaze nisam siguran zbog cega">
+      <created>1610726821013</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610726821013</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -453,14 +449,15 @@
     <MESSAGE value="kopiran t9 src folder,baza.db,baza.db sql ali ima greske sa library" />
     <MESSAGE value="dodan SDK library na inteliJ" />
     <MESSAGE value="zavrsen fxml fajlovi, podesavanje testova da prolaze" />
-    <option name="LAST_COMMIT_MESSAGE" value="zavrsen fxml fajlovi, podesavanje testova da prolaze" />
+    <MESSAGE value="svi osim 1 testa prolaze nisam siguran zbog cega" />
+    <option name="LAST_COMMIT_MESSAGE" value="svi osim 1 testa prolaze nisam siguran zbog cega" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/ba/unsa/etf/rpr/GeografijaDAO.java</url>
-          <line>156</line>
+          <line>157</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
